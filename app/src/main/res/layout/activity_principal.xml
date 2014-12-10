@@ -41,7 +41,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btNuevoPartido"
+        android:text="@string/btAlta"
         android:id="@+id/btAlta"
         android:layout_below="@+id/etFecha"
         android:layout_alignParentLeft="true"

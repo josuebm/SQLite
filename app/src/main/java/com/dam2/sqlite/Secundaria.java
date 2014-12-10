@@ -62,7 +62,8 @@ public class Secundaria extends Activity {
     }
 
     public void calcularMedia(){
-        Cursor d = gp.getCursor("select avg(valoracion) from partido where idjugador = " + idj);
+        Cursor d = gp.getCursor("select avg(" + Contrato.TablaPartido.VALORACION + ") from " + Contrato.TablaPartido.TABLA +
+                " where " + Contrato.TablaPartido.IDJUGADOR + " = " + idj);
         d.moveToFirst();
         tvValoracionMedia.setText(getResources().getString(R.string.valMedia) + " " + d.getFloat(0));
     }
