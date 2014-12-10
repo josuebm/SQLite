@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SQLite</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_principal_proveedor">PrincipalProveedor</string>
+    <string name="title_activity_secundaria">Secundaria</string>
+    <string name="fNac">F. Nac.:</string>
+    <string name="tlf">Tlf.:</string>
+    <string name="valoracion">Valoración:</string>
+    <string name="contrincante">Contrincante:</string>
+    <string name="jugador">Jugador:</string>
+    <string name="valMedia">Valoración media:</string>
+
+    <string name="etNombre">Nombre</string>
+    <string name="etTelefono">Teléfono</string>
+    <string name="etFecha">Fecha</string>
+    <string name="btAlta">Alta</string>
+    <string name="etValoracion">valoración</string>
+    <string name="etContrincante">Contrincante</string>
+    <string name="btNuevoPartido">Nuevo Partido</string>
+
+</resources>

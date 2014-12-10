@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.dam2.sqlite.Secundaria">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jugador"
+        android:id="@+id/tvNombreJugador"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textColor="#ffff7107"
+        android:textSize="20sp"
+        android:layout_toLeftOf="@+id/tvValoracionMedia"
+        android:layout_toStartOf="@+id/tvValoracionMedia" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etValoracion"
+        android:layout_below="@+id/tvNombreJugador"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Valoración"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etContrincante"
+        android:layout_below="@+id/etValoracion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Contrincante"
+        android:layout_alignRight="@+id/etValoracion"
+        android:layout_alignEnd="@+id/etValoracion" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btNuevoPartido"
+        android:id="@+id/btNuevoPartido"
+        android:layout_below="@+id/etContrincante"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="alta" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvPartido"
+        android:layout_below="@+id/btNuevoPartido"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valMedia"
+        android:id="@+id/tvValoracionMedia"
+        android:textStyle="italic"
+        android:layout_alignTop="@+id/tvNombreJugador"
+        android:layout_alignRight="@+id/etValoracion"
+        android:layout_alignEnd="@+id/etValoracion"
+        android:layout_marginTop="5dp" />
+</RelativeLayout>
