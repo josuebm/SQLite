@@ -50,6 +50,7 @@ public class Secundaria extends Activity {
         valoracion = etValoracion.getText().toString();
         contrincante = etContrincante.getText().toString();
         Partido p = new Partido(Integer.valueOf((int) idj), valoracion, contrincante);
+        long id = gp.insert(p);
         Cursor c = gp.getCursor(Contrato.TablaPartido.IDJUGADOR +"="+idj, null, null);
         ad.changeCursor(c);
         vaciarCampos();

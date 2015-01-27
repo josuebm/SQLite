@@ -23,6 +23,7 @@ public class Principal extends Activity {
     private GestorJugador gj;
     private EditText etNombre, etTelefono, etFecha;
     private Adaptador ad;
+    private ListView listv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class Principal extends Activity {
         etFecha = (EditText)findViewById(R.id.etFecha);
         final Context contexto = getApplicationContext();
         final ListView lv = (ListView)findViewById(R.id.lvJugadores);
-
+        listv = lv;
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -71,6 +72,7 @@ public class Principal extends Activity {
         telefono = etTelefono.getText().toString();
         fecha = etFecha.getText().toString();
         Jugador j = new Jugador(nombre, telefono, fecha);
+        long id = gj.insert(j);
         Cursor c = gj.getCursor();
         ad.changeCursor(c);
         vaciarCampos();
